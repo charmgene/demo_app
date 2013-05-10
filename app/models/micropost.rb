@@ -1,0 +1,5 @@
+class Micropost < ActiveRecord::Base
+  attr_accessible :cotent, :user_id
+  belongs_to :user
+  validates :cotent, :length => { :maximum => 140 }
+end
